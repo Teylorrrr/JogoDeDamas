@@ -1,20 +1,4 @@
 window.onload = function () {
-  /*
-
-  JOGO DE DAMAS v3.0
-  AUTOR: HERCO FERNANDO TAIMO ZAUZAU
-  EMAIL: ZAUZAUHERCO@GMAIL.COM
-  DATA:
-
-  REGRAS BASICAS
-  
-  * OS DADOS SE MOVIMENTAM APENAS PARA FRENTE. EXCEPTO EM CASOS DE HAVER UM OPOSTO LOGO ATRAS. AI PODEM VOLTAR PARA ATACAR;
-
-  * OS DADOS NAO SAO BOLQUEADOS APOS SE MOVIMENTAREM POR CAUSA DE CASOS EM QUE O JOGADOR DEVA JOGAR MAIS DE UMA VEZ PARA ATACAR MULTIPLOS DADOS OPOSTOS;
-
-  * EM CASOS DE BOLAS INIMIGAS ALINHADAS NA MESMA DIAGONAL COM ABERTURAS DE ATAQUE, PODE SE ATACAR MAIS DE UMA AO MESMO TEMPO. MAS SE ESTIVEREM EM DIAGONAIS DIFERENTES, SERA PRECISO ATACAR UMA POR UMA, POR LOGICA DO MOVIMENTO DA BOLA;
-  
-  */
 
   let box = document.querySelectorAll("td");
 
@@ -42,7 +26,7 @@ window.onload = function () {
 
   for (let i = 0; i < lista.length; i++) {
     //ORGANIZAR OS QUADRADOS EM ORDEM A LINHA
-    for (let j = 0; j < 8; j++) {
+    for (let j = 0; j < 20; j++) {
       //MUDAR DE 8 A 8 QUADRADOS
       lista[i][j] = box[posBox];
       posBox++;
@@ -51,7 +35,7 @@ window.onload = function () {
 
   for (let i = 0; i < lista.length; i++) {
     //GERAR UMA DIV "BOLA" NAS POSICOES CERTAS
-    for (let j = 0; j < 8; j++) {
+    for (let j = 0; j < 20; j++) {
       if ((i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0)) {
         lista[i][j].setAttribute("tipoDeQuadrado", "preto");
 
